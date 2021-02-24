@@ -1,14 +1,10 @@
 import express, { json } from "express";
 import mongoose from "mongoose";
-import { serverRouter } from "./server/routes.mjs";
+import { serverRouter } from "./server/endPoints.mjs";
 
 var app = express();
 app.use(express.json({}));
 app.use("/", serverRouter);
-
-//In models folder, I have create a Server Model
-//In controller.mjs, I have written Logic
-//In routes.mjs, I have created Routes for my API where i called functions from controller.mjs
 
 mongoose
   .connect(
@@ -22,8 +18,8 @@ mongoose
   )
   .then((res) => {
     console.log("DATABASE CONNECTED");
-    app.listen(8080, () => {
-      console.log("SERVER STARTED");
+    app.listen(3000, () => {
+      console.log("SERVER STARTED AT http://localhost:3000/");
     });
   })
   .catch((err) => {

@@ -7,7 +7,7 @@ import {
   getServers,
   updateServer,
   deleteServer,
-} from "./controller.mjs";
+} from "./functions.mjs";
 
 router.get("/servers", async (req, res) => {
   // USING .then

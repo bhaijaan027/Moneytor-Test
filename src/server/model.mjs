@@ -26,6 +26,4 @@ const serverSchema = mongoose.Schema(
   { timestamps: true }
 );
 
-//here i used timestamps for auto filled atributes ie. created_at ,updated_at
-
 export const serverModel = mongoose.model("server", serverSchema);

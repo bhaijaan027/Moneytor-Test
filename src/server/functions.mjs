@@ -1,4 +1,4 @@
-import { serverModel } from "../models/server.mjs";
+import { serverModel } from "./model.mjs";
 
 export const createNewServer = async (serverInput) => {
   const newServer = await serverModel.create(serverInput);
